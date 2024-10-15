@@ -2,12 +2,9 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/full-stack-ecommerce
-    spring.datasource.username: root
-    spring.datasource.password: root
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySql8Dialect
+    username: root
+    password: root
+
   data:
     rest:
       base-path: /api
