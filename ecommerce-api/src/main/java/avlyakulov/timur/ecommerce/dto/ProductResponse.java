@@ -1,7 +1,11 @@
-package avlyakulov.timur.ecommerce.entity;
+package avlyakulov.timur.ecommerce.dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -11,9 +15,8 @@ import java.util.Date;
 
 @Getter
 @Setter
-@Entity
-@Table(name="product")
-public class Product {
+@NoArgsConstructor
+public class ProductResponse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,8 +51,4 @@ public class Product {
     @Column(name = "last_updated")
     @UpdateTimestamp
     private Date lastUpdated;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id", nullable = false)
-    private ProductCategory category;
 }

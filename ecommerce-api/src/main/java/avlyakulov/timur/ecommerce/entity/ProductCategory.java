@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Set;
+import java.util.List;
 
-@Entity
-@Table
 @Getter
 @Setter
+@Entity
+@Table(name = "product_category")
 public class ProductCategory {
 
     @Id
@@ -21,5 +21,5 @@ public class ProductCategory {
     private String categoryName;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
-    private Set<Product> products;
+    private List<Product> products;
 }
