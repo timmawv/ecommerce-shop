@@ -9,20 +9,14 @@ import { map } from 'rxjs'
 })
 export class ProductService {
 
-  private baseUrl = "http://localhost:8080/api/products";
+  private baseUrl = "http://localhost:8080/api/v1/products";
 
   constructor(private httpClient: HttpClient) { }
 
-  getProductList(): Observable<Product[]> {
-      return this.httpClient.get<GetResponse>(this.baseUrl)
-                  .pipe(
-                    map(response => response._embedded.products)
-                  );
-  }
-}
+  getProductList(theCategoryId: number): Observable<Product[]> {
+    
+    const url = `${this.baseUrl}?categoryId=${theCategoryId}`;
 
-interface GetResponse {
-  _embedded: {
-    products: Product[];
+    return this.httpClient.get<Product[]>(url);
   }
 }

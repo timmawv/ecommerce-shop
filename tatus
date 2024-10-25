@@ -1,0 +1,35 @@
+[33mcommit 8687602a41f45bc8e3e3cea91c664aeeb381414e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Timur <avlyakulovtimur@gmail.com>
+Date:   Wed Oct 16 13:55:12 2024 +0200
+
+    add cross origin support
+
+[33mcommit 5bd42b20ea3fd032946887de887b82863dc4db56[m
+Author: Timur <avlyakulovtimur@gmail.com>
+Date:   Wed Oct 16 13:54:42 2024 +0200
+
+    add table of products
+
+[33mcommit 968de622e6980ea7b918ad6a04801a2310b1367f[m
+Author: Timur <avlyakulovtimur@gmail.com>
+Date:   Wed Oct 16 10:28:00 2024 +0200
+
+    created angular project
+
+[33mcommit dab91bb5e0cbe2ae9a0b06abfcc0202369e0c744[m
+Author: Timur <avlyakulovtimur@gmail.com>
+Date:   Tue Oct 15 18:44:44 2024 +0200
+
+    add repositories
+
+[33mcommit a66ac50e596b47e59fde8e766f394c67b8fbf699[m
+Author: Timur <avlyakulovtimur@gmail.com>
+Date:   Tue Oct 15 17:59:30 2024 +0200
+
+    add gitignore
+
+[33mcommit c10b8affa2c5d2455f12879af3f8eb7e9c85a0c4[m
+Author: Timur <avlyakulovtimur@gmail.com>
+Date:   Tue Oct 15 17:57:07 2024 +0200
+
+    init project
