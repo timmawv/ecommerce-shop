@@ -6,11 +6,13 @@ import avlyakulov.timur.ecommerce.mapper.ProductMapper;
 import avlyakulov.timur.ecommerce.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class ProductService {
 
     private final ProductRepository productRepository;
@@ -22,12 +24,12 @@ public class ProductService {
             List<Product> products = productRepository.findAll();
             return productMapper.toResponseList(products);
         } else {
-            List<Product> productsByCategory = findCategoryById(categoryId);
-            return productMapper.toResponseList(productsByCategory);
+            return findAllByCategoryId(categoryId);
         }
     }
 
-    private List<Product> findCategoryById(Long categoryId) {
-        return productRepository.findByCategoryId(categoryId);
+    public List<ProductResponse> findAllByCategoryId(Long categoryId) {
+        List<Product> products = productRepository.findByCategoryId(categoryId);
+        return productMapper.toResponseList(products);
     }
 }
