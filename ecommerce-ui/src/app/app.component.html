@@ -7,26 +7,9 @@
         <img src="shop.png" height="60px" width="60px" alt="eCommerce" class="img-responsive">
       </a>
     </div>
-    <div class="menu-sidebar-content js-scrollbar1">
-      <nav class="navbar-sidebar">
-        <ul class="list-unstyled navbar-list">
-          <li>
-            <a [routerLink]="['/products']" [queryParams]="{ categoryId: 1 }" routerLinkActive="active-link">Books</a>
-          </li>
-          
-            <li>
-              <a [routerLink]="['/products']" [queryParams]="{ categoryId: 2 }" routerLinkActive="active-link">Coffe</a>
-            </li>
-          
-          <li>
-            <a href="#">Mouse Pads</a>
-          </li>
-          <li>
-            <a href="#">Luggage Tags</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+
+    <app-product-category-menu></app-product-category-menu>
+
   </aside>
   <!-- END MENU SIDEBAR-->
 
