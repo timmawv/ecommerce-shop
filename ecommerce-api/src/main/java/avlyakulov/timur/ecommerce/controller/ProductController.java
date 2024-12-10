@@ -19,4 +19,9 @@ public class ProductController {
     public List<ProductResponse> findAll(@RequestParam(value = "categoryId", required = false) Long categoryId) {
         return productService.findAll(categoryId);
     }
+
+    @GetMapping("/search")
+    public List<ProductResponse> findAllBySearchName(@RequestParam(value = "name") String searchName) {
+        return productService.findAllBySearchName(searchName);
+    }
 }

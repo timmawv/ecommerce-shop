@@ -32,4 +32,9 @@ public class ProductService {
         List<Product> products = productRepository.findByCategoryId(categoryId);
         return productMapper.toResponseList(products);
     }
+
+    public List<ProductResponse> findAllBySearchName(String searchName) {
+        List<Product> products = productRepository.findAllBySearchName(searchName);
+        return productMapper.toResponseList(products);
+    }
 }

@@ -12,4 +12,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Query("select p from Product p where p.category.id = ?1")
     List<Product> findByCategoryId(Long id);
+
+    @Query("select p from Product p where p.name LIKE %?1% ")
+    List<Product> findAllBySearchName(String searchName);
 }
