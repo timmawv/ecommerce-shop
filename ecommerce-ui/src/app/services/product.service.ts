@@ -24,4 +24,10 @@ export class ProductService {
 
     return this.httpClient.get<ProductCategory[]>(url);
   }
+
+  searchProducts(theKeyword: string) {
+    const url = `${this.baseUrl}/products/search?name=${theKeyword}`;
+    console.log(`Url to search our data ${url}`)
+    return this.httpClient.get<Product[]>(url);
+  }
 }
